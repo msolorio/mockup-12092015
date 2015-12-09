@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--
+	Theme Name: PSD Mockup
+	Author: Michael Solorio
+	Email: msolorio.wd@gmail.com
+
+	***************************************************************************************
+	Description: This is a mockup created from a PSD for a prescreening coding test for a potential employer.
+
+	Technologies used
+
+	Handlebars
+	- The Handlebars Javascript templating engine is used to populate the comments section
+
+	jQuery
+	- Used in conjection with moment.js to convert the unix timestamp given in the prompt into the proper date format (MM/DD/YYYY)
+	- Used to sort the comments in order by date
+	- Used to code the functionality for the slideshow
+	- Used to code the functionality for the hamburger navigation
+	- Javascript is combined into a single script file with the moment, handlebars, and jquery minified
+
+	CSS3
+	- CSS media queries used to make this page responsive and functional across devices of all sizes
+	- the page is functional in all modern browsers down to IE8
+	- Code is organized effeciently by section with a table of contents
+	- CSS is combined into a single stylesheet with normalize.css minified
+	***************************************************************************************
+	-->
+	<meta charset="UTF-8">
+	<title>PSD Mockup</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css"/>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/x-handlebars-template" id="comments-template">
+		{{#comments_group}}
+		<li class="comments-li" id="{{timestamp}}">
+			<span class="comments-text">"{{comment}}"</span>
+			<span class="comments-label">
+				<span class="comments-name">- {{name}}</span>&nbsp;
+				<span class="time"></span>
+			</span>
+		</li>
+		{{/comments_group}}
+	</script>
+</head>
+<body>
+	<header>
+		<div class="window-container">
+			<div class="logo">
+				<img class="logo-img" src="img/logo.png" alt="">
+			</div>
+			<nav class="header-nav">
+				<ul class="header-nav-ul">
+					<li class="header-nav-li"><a href="" class="header-nav-a">home</a></li>
+					<li class="header-nav-li"><a href="" class="header-nav-a">uno</a></li>
+					<li class="header-nav-li"><a href="" class="header-nav-a">dos</a></li>
+					<li class="header-nav-li header-nav-li-last"><a href="" class="header-nav-a">tres</a></li>
+				</ul>
+			</nav>
+			<button class="hamburger">&#9776;</button>
+			<button class="cross">&#735;</button>
+		</div>
+	</header>
+	<div class="clear-both"></div>
+	<nav class="hamburger-nav">
+		<ul class="hamburger-nav-ul">
+			<li class="hamburger-nav-li"><a href="" class="hamburger-nav-a">home</a></li>
+			<li class="hamburger-nav-li"><a href="" class="hamburger-nav-a">uno</a></li>
+			<li class="hamburger-nav-li"><a href="" class="hamburger-nav-a">dos</a></li>
+			<li class="hamburger-nav-li hamburger-nav-li-last"><a href="" class="hamburger-nav-a">tres</a></li>
+		</ul>
+	</nav>
+	<main>
+		<div class="window-container">
+			<section class="slideshow-section">
+				<div class="slideshow-container">
+					<img class="slideshow-img" src="img/slideshow/1.jpg" alt="">
+					<img class="slideshow-img" src="img/slideshow/2.jpg" alt="">
+					<img class="slideshow-img" src="img/slideshow/3.jpg" alt="">
+				</div>
+			</section>
+			<section class="content-blocks-section">
+				<div class="content-blocks-column">
+					<div class="content-blocks-container">
+						<h2 class="content-blocks-h2">This is Some Content</h2>
+						<img class="content-blocks-img" src="img/column-left.jpg" alt="">
+						<div class="content-blocks-desc font-georgia">
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+						</div>
+					</div>
+				</div>
+				<div class="content-blocks-column">
+					<div class="content-blocks-container">
+						<h2 class="content-blocks-h2">This is Some Content</h2>
+						<img class="content-blocks-img" src="img/column-center.jpg" alt="">
+						<div class="content-blocks-desc font-georgia">
+							<ul class="col2-ul">
+								<li class="col2-li">
+									<img src="img/list.png" alt="check mark icon">
+									Sed lacinia enim et nisl viverra.
+								</li>
+								<li class="col2-li">
+									<img src="img/list.png" alt="check mark icon">
+									Nullam elementum quam in luctus.
+								</li>
+								<li class="col2-li">
+									<img src="img/list.png" alt="check mark icon">
+									Integer ac et lacus hendrerit pretium.
+								</li>
+								<li class="col2-li">
+									<img src="img/list.png" alt="check mark icon">
+									Donec placerat dui et blandit.
+								</li>
+								<li class="col2-li">
+									<img src="img/list.png" alt="check mark icon">
+									Nullam elementum quam in luctus.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content-blocks-column comments-content-blocks-column">
+					<div class="content-blocks-container comments-content-blocks-container">
+						<h2 class="content-blocks-h2">What Others are Saying</h2>
+						<div class="comments-container font-georgia">
+							<ul class="comments-ul">
+								<!-- handlebars template feeds into here -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="clear-both"></div>
+	</main>
+	<footer>
+		<div class="window-container">
+			<div class="copyright">&copy;Copyright, All Rights Reserved.</div>
+			<nav class="footer-nav">
+				<ul class="footer-nav-ul">
+					<li class="footer-nav-li"><a href="" class="footer-nav-a">&nbsp;home&nbsp;</a></li>
+					<li class="footer-nav-divider">|</li>
+					<li class="footer-nav-li"><a href="" class="footer-nav-a">&nbsp;uno&nbsp;</a></li>
+					<li class="footer-nav-divider">|</li>
+					<li class="footer-nav-li"><a href="" class="footer-nav-a">&nbsp;dos&nbsp;</a></li>
+					<li class="footer-nav-divider">|</li>
+					<li class="footer-nav-li"><a href="" class="footer-nav-a">&nbsp;tres&nbsp;</a></li>
+					<li class="footer-nav-divider">|</li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+</body>
+</html>
