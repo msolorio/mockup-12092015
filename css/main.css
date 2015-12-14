@@ -198,6 +198,9 @@ header {
 	line-height:59px;
 	outline:none;
 }
+.hamburger-nav {
+	display:none;
+}
 .hamburger-nav-ul {
 	text-align:center;
 	list-style-type:none;
@@ -419,7 +422,7 @@ footer {
 	.logo-img {
 		height:53px;
 	}
-	.hamburger, .cross {
+	.hamburger {
 		display:block;
 	}
 	/*content blocks*/
