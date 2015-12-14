@@ -32,18 +32,6 @@
 	<title>PSD Mockup</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css"/>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/x-handlebars-template" id="comments-template">
-		{{#comments_group}}
-		<li class="comments-li" id="{{timestamp}}">
-			<span class="comments-text">"{{comment}}"</span>
-			<span class="comments-label">
-				<span class="comments-name">- {{name}}</span>&nbsp;
-				<span class="time"></span>
-			</span>
-		</li>
-		{{/comments_group}}
-	</script>
 </head>
 <body>
 	<header>
@@ -152,5 +140,17 @@
 			</nav>
 		</div>
 	</footer>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/x-handlebars-template" id="comments-template">
+		{{#comments_group}}
+		<li class="comments-li" id="{{timestamp}}">
+			<span class="comments-text">"{{comment}}"</span>
+			<span class="comments-label">
+				<span class="comments-name">- {{name}}</span>&nbsp;
+				<span class="time"></span>
+			</span>
+		</li>
+		{{/comments_group}}
+	</script>
 </body>
 </html>
